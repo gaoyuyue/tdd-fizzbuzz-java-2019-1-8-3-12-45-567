@@ -14,7 +14,7 @@ public class FizzBuzz {
             builder.append("Buzz");
         }
         if (number % 7 == 0) {
-            return "Whizz";
+            builder.append("Whizz");
         }
         return builder.toString();
     }
