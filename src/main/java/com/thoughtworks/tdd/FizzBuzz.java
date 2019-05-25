@@ -2,12 +2,20 @@ package com.thoughtworks.tdd;
 
 public class FizzBuzz {
     public String fizzBuzz(int number) {
+        if (number % 3 != 0 && number % 5 != 0 && number % 7 != 0) {
+            return String.valueOf(number);
+        }
+
+        StringBuilder builder = new StringBuilder();
         if (number % 3 == 0) {
-            return "Fizz";
+            builder.append("Fizz");
         }
         if (number % 5 == 0) {
-            return "Buzz";
+            builder.append("Buzz");
         }
-        return String.valueOf(number);
+        if (number % 7 == 0) {
+            return "Whizz";
+        }
+        return builder.toString();
     }
 }

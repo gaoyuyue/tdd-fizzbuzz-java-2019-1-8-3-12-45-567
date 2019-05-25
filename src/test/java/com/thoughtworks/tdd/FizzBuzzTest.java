@@ -27,4 +27,14 @@ public class FizzBuzzTest {
     public void should_return_buzz_when_input_number_is_multiple_of_5() {
         assertThat(fizzBuzz.fizzBuzz(5), is("Buzz"));
     }
+
+    @Test
+    public void should_return_whizz_when_input_number_is_multiple_of_7() {
+        assertThat(fizzBuzz.fizzBuzz(7), is("Whizz"));
+    }
+
+    @Test
+    public void should_return_fizz_buzz_when_input_number_is_multiple_of_3_and_5() {
+        assertThat(fizzBuzz.fizzBuzz(15), is("FizzBuzz"));
+    }
 }
