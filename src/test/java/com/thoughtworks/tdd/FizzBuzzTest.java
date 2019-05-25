@@ -1,14 +1,25 @@
 package com.thoughtworks.tdd;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class FizzBuzzTest {
+    private FizzBuzz fizzBuzz;
+    @BeforeEach
+    public void before() {
+        fizzBuzz = new FizzBuzz();
+    }
+
     @Test
     public void should_return_number() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.fizzBuzz(1), is("1"));
+    }
+
+    @Test
+    public void should_return_fizz_when_input_number_is_multiple_of_3() {
+        assertThat(fizzBuzz.fizzBuzz(3), is("Fizz"));
     }
 }
